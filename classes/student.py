@@ -12,10 +12,23 @@ class Student:
         print(self.first_name, self.last_name)
 
     def update_grade(self, course, new_grade):
-        self.grades[course] = new_grade
+
+        if new_grade < 0 or new_grade > 100:
+            print ("Invalid grade")
+        else:
+            self.grades[course] = new_grade
+            print ("Valid grade")
 
     def get_info(self):
         return self.first_name, self.last_name
 
     def calculate_final_grade(self):
-        
+        total = 0
+
+        for grade in self.grades.values():
+            total = total + grade 
+
+        if len(self.grades) == 0:
+            return 0
+
+        return total / len(self.grades)
