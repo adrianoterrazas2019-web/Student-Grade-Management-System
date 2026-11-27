@@ -26,7 +26,6 @@ print(student2.grades)
 print(student1.calculate_final_grade())
 print(student2.calculate_final_grade())
 
-
 teacher1 = Teacher (2001, "Juan", "Vargas", "Computer Science", ["Python", "Data Bases"], "vargas@example.com")
 
 teacher1.display_name()
