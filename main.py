@@ -70,3 +70,10 @@ print (grade1.get_info())
 
 print (grade1.is_valid_grade())
 print (grade2.is_valid_grade())
+
+if grade2.is_valid_grade() and grade2.student_id == student1.student_id and grade2.course_id == course1.course_id:
+    student1.update_grade(course1.course_name, grade2.grade)
+else:
+    print("Validation failed")
+    
+print (student1.grades)
